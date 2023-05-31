@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F0F0"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:hint="Enter your age"
+                app:boxStrokeColor="@color/lightPink"
+                app:hintTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/UserAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:fontFamily="@font/raleway"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:hint="Enter your glucose level"
+                app:boxStrokeColor="@color/lightPink"
+                app:hintTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/UserGlucoseLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:fontFamily="@font/raleway"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text3"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:hint="Enter your BMI ratio"
+                app:boxStrokeColor="@color/lightPink"
+                app:hintTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/UserBMI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:fontFamily="@font/raleway"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose your Gender"
+                android:fontFamily="@font/raleway"
+                android:paddingTop="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingBottom="13dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text3"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleText1">
+
+                <AutoCompleteTextView
+                    android:id="@+id/TextViewGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/raleway"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Male" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Do you have any heart disease"
+                android:fontFamily="@font/raleway"
+                android:paddingTop="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingBottom="13dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleText2">
+
+                <AutoCompleteTextView
+                    android:id="@+id/TextViewHeartDisease"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/raleway"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Yes" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Have you ever married"
+                android:fontFamily="@font/raleway"
+                android:paddingTop="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingBottom="13dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout3"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleText3">
+
+                <AutoCompleteTextView
+                    android:id="@+id/TextViewEverMarried"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/raleway"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Yes" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Do you have hypertension"
+                android:fontFamily="@font/raleway"
+                android:paddingTop="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingBottom="13dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout4"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleText4">
+
+                <AutoCompleteTextView
+                    android:id="@+id/TextViewHypertension"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/raleway"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Yes" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What type of work you do ?"
+                android:fontFamily="@font/raleway"
+                android:paddingTop="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingBottom="13dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleText5">
+
+                <AutoCompleteTextView
+                    android:id="@+id/TextViewWorkType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/raleway"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Private Job" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleText6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What kind of area do you live ?"
+                android:fontFamily="@font/raleway"
+                android:paddingTop="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingBottom="13dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout6"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleText6">
+
+                <AutoCompleteTextView
+                    android:id="@+id/TextViewResidenceType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/raleway"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Urban" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleText7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what is your smoking status ?"
+                android:fontFamily="@font/raleway"
+                android:paddingTop="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingBottom="13dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout7"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleText7">
+
+                <AutoCompleteTextView
+                    android:id="@+id/TextViewSmokingStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/raleway"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Never Smoked" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPredict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout7"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginHorizontal="14dp"
+                android:fontFamily="@font/raleway"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:background="#FF1766"
+                android:text="Get Result"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
